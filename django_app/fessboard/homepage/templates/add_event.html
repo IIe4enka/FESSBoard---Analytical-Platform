@@ -7,7 +7,7 @@
 
 <body>
     <div class="m-5">
-        <h1>Add Project</h1>
+        <h1>Add Event</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
@@ -35,7 +35,7 @@
             <h2>Teachers</h2>
             {{ teacher_form.as_p }}
             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-            <a class="btn btn-close btn-lg" href="/project-hub/">Cancel</a>
+            <a class="btn btn-close btn-lg" href="/event-hub/">Cancel</a>
         </form>
     </div>
 </body>
@@ -49,7 +49,7 @@
 </script>
 
 <script>
-    $(document).on('click', '.delete-form', function() {
+$(document).on('click', '.delete-form', function() {
     $(this).closest('div').remove();
     var forms = $('#form_set').children('div');
     $('#id_form-TOTAL_FORMS').val(forms.length);
